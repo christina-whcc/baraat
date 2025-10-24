@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Houston's Premier Baraat Horse and Carriage Services - Elegant white horses with traditional decorations for your wedding procession. Serving Houston and all of Texas.">
+    <title>Baraat Horses in Houston | White Horse and Carriage Company</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://raw.githubusercontent.com/christina-whcc/texasfuneralcarriage/main/images/header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+            min-height: 520px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .intro {
+            background: #8B0000;
+            color: white;
+            padding: 10px;
+        }
+
+        .intro .container {
+            padding: 10px;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            color: #8B0000;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .service-card ul {
+            list-style: none;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        .service-card li {
+            padding: 10px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #8B0000;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .mission {
+            text-align: center;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+
+        .mission h2 {
+            font-size: 2rem;
+            color: #8B0000;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .mission p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .phone-highlight {
+            color: #8B0000;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .phone-highlight:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: #fff;
+            padding: 60px 20px;
+        }
+
+        .contact-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-logo {
+            width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #8B0000;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #6B0000;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin: 10px 0;
+        }
+
+        .footer-content a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            transition: opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        .social-links img {
+            width: 32px;
+            height: 32px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .header {
+                padding: 80px 20px;
+                min-height: 400px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Header -->
+    <header class="header">
+        <h1>Houston's Premier</h1>
+        <h1>Baraat Horse and Carriage Services</h1>
+        <p class="subtitle">Elegant white horses with traditional decorations for your wedding procession.</p>
+        <p class="subtitle">Serving Houston and all of Texas.</p>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 3rem; font-weight: 300; margin-bottom: 15px; margin-top: 0; letter-spacing: 1px;">Houston Baraat Horse Services</h2>
+            <p style="text-align: center; font-size: 1.5rem; margin-bottom: 20px;"><strong>Making Your Special Day Unforgettable</strong></p>
+            <p>Celebrate your wedding with the majestic tradition of a <strong>Baraat procession</strong> featuring our beautiful <strong>White Horse and Carriage Company</strong> services. Based in San Antonio and serving all of Texas, we specialize in providing <strong>elegantly decorated white horses</strong> for Indian, Pakistani, and South Asian weddings. Our horses are professionally trained, beautifully adorned with traditional decorations, and accompanied by experienced handlers who understand the cultural significance of your celebration.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container">
+        <div class="services">
+            <div class="service-card">
+                <h3>White Baraat Horse</h3>
+                <ul>
+                    <li>Stunning white horse with traditional Baraat decorations</li>
+                    <li>Professional horse handler included</li>
+                    <li>Custom decorations in your wedding colors</li>
+                    <li>Perfect for groom's grand entrance</li>
+                    <li>Photo opportunities throughout the procession</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Horse & Carriage Package</h3>
+                <ul>
+                    <li>Elegant white horse with decorated carriage</li>
+                    <li>Accommodates bride, groom, or family members</li>
+                    <li>Traditional and luxurious presentation</li>
+                    <li>Experienced driver and handler team</li>
+                    <li>Customizable decoration options</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h3>Full Baraat Procession</h3>
+                <ul>
+                    <li>Complete Baraat experience with music coordination</li>
+                    <li>Multiple horses available for larger parties</li>
+                    <li>Professional coordination with your wedding planner</li>
+                    <li>Flexible timing and route options</li>
+                    <li>Serving Houston, Dallas, San Antonio, Austin & beyond</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <p>White Horse and Carriage Company brings years of experience in South Asian weddings throughout Texas. We understand the cultural importance of the Baraat procession and work closely with families to ensure every detail is perfect. Our horses are gentle, well-trained, and accustomed to music, crowds, and celebration. We serve Houston, Dallas, San Antonio, Austin, and communities across Texas.</p>
+            <p><br><b>For availability and pricing, call <a href="tel:210-646-4102" class="phone-highlight">210-646-4102</a></b></p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+        <div class="contact-wrapper">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 30px; color: #8B0000;">Request a Quote</h2>
+                
+                <form name="baraat-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="baraat-contact">
+                    <!-- Honeypot field to prevent spam -->
+                    <p style="display:none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="wedding-date">Wedding Date</label>
+                        <input type="date" id="wedding-date" name="wedding-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Wedding Location/City</label>
+                        <input type="text" id="location" name="location">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="white-baraat-horse">White Baraat Horse</option>
+                            <option value="horse-carriage">Horse & Carriage Package</option>
+                            <option value="full-baraat">Full Baraat Procession</option>
+                            <option value="other">Other / Multiple Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your wedding plans..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Request Quote</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <img src="https://raw.githubusercontent.com/christina-whcc/texasfuneralcarriage/main/images/logo.jpg" alt="White Horse and Carriage Company" class="contact-logo">
+                <p><strong style="font-size: 1.2rem;">Houston Baraat Horse Services</strong></p>
+                <p>By</p>
+                <p><strong style="font-size: 1.2rem;">White Horse and Carriage Company</strong></p>
+                <p style="margin-top: 20px;">Serving Houston, Dallas, San Antonio, Austin & All of Texas</p>
+                <p style="margin-top: 20px;"><a href="tel:210-646-4102" style="color: #8B0000; text-decoration: none; font-size: 1.1rem;">210-646-4102</a></p>
+                <p><a href="mailto:info@whitehorseandcarriage.com" style="color: #8B0000; text-decoration: none;">info@whitehorseandcarriage.com</a></p>
+                <div class="social-links" style="margin-top: 30px;">
+                    <a href="http://facebook.com/whitehorseandcarriage" target="_blank" aria-label="Facebook">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                    </a>
+                    <a href="http://instagram.com/whitehorseandcarriageco" target="_blank" aria-label="Instagram">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 White Horse and Carriage Company. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
