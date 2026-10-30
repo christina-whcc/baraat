@@ -471,46 +471,42 @@
     <p class="contact-intro">Tell us about your wedding and we'll respond within 24 hours with availability and pricing. We can't wait to be part of your celebration.</p>
 
     <form action="https://formspree.io/f/xnjozgpy" method="POST">
-  <!-- sends the visitor to your thank-you page after submitting -->
-  <input type="hidden" name="_next" value="https://texasbaraathorse.com/thank-you">
- 
-  <div class="form-group">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
-  </div>
-  <div class="form-group">
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
-  </div>
-  <div class="form-group">
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" placeholder="(210) 646-4102" autocomplete="tel" required>
-  </div>
-  <div class="form-group">
-    <label for="service">Service</label>
-    <select id="service" name="service">
-      <option value="">Select a service</option>
-      <option value="horse-only">Baraat - Horse Only</option>
-      <option value="horse-and-carriage">Baraat - Horse and Carriage</option>
-      <option value="vidaai">Vidaai Carriage</option>
-      <option value="baraat-vidaai-package">Baraat &amp; Vidaai Package</option>
-      <option value="other">Other / Not Sure Yet</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="date">Wedding Date</label>
-    <input type="date" id="date" name="date">
-  </div>
-  <div class="form-group">
-    <label for="venue">Venue &amp; City</label>
-    <input type="text" id="venue" name="venue" placeholder="Venue name and city in Texas">
-  </div>
-  <div class="form-group">
-    <label for="message">Tell Us About Your Wedding</label>
-    <textarea id="message" name="message" placeholder="Share any details, special requests, or questions..."></textarea>
-  </div>
-  <button class="form-submit" type="submit">Send Inquiry</button>
-</form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(210) 646-4102" autocomplete="tel" required>
+      </div>
+      <div class="form-group">
+        <label for="service">Service</label>
+        <select id="service" name="service">
+          <option value="">Select a service</option>
+          <option value="baraat">Baraat Carriage</option>
+          <option value="vidaai">Vidaai Carriage</option>
+          <option value="both">Baraat &amp; Vidaai Package</option>
+          <option value="other">Other / Not Sure Yet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Wedding Date</label>
+        <input type="date" id="date" name="wedding_date">
+      </div>
+      <div class="form-group">
+        <label for="venue">Venue &amp; City</label>
+        <input type="text" id="venue" name="venue" placeholder="Venue name and city in Texas">
+      </div>
+      <div class="form-group">
+        <label for="message">Tell Us About Your Wedding</label>
+        <textarea id="message" name="message" placeholder="Share any details, special requests, or questions..."></textarea>
+      </div>
+      <button class="form-submit" type="submit">Send Inquiry</button>
+    </form>
   </div>
 </section>
 
