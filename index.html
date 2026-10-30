@@ -470,97 +470,43 @@
     <h2 class="section-title" id="contact-heading">Book Your<br><em>Baraat</em> Carriage</h2>
     <p class="contact-intro">Tell us about your wedding and we'll respond within 24 hours with availability and pricing. We can't wait to be part of your celebration.</p>
 
-    <!-- =======================================================================
- texasbaraathorse.com  |  Formspree form: xljjlvqa
-
- STEP 1: In index.html, find the contact form:
-         <form action="https://formspree.io/f/xnjozgpy" method="POST"> ... </form>
-         Delete it (opening tag through closing </form>) and paste PART A.
-
- STEP 2: Just before </body>, paste PART B as a NEW <script> block.
-         Leave your existing toggleFaq / nav script where it is.
-======================================================================= -->
-
-
-<!-- ======================= PART A: THE FORM ======================= -->
-<form id="inquiry-form" action="https://formspree.io/f/xljjlvqa" method="POST" novalidate>
-
-  <!-- tracking fields (hidden) -->
-  <input type="hidden" name="website" value="texasbaraathorse.com">
-  <input type="hidden" name="category" value="Baraats">
-  <input type="hidden" name="_subject" value="New BARAAT inquiry - texasbaraathorse.com">
-  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-
-  <div class="form-group">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
-  </div>
-  <div class="form-group">
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
-  </div>
-  <div class="form-group">
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" placeholder="(210) 646-4102" autocomplete="tel" required>
-  </div>
-  <div class="form-group">
-    <label for="service">Service</label>
-    <select id="service" name="service">
-      <option value="">Select a service</option>
-      <option value="horse-only">Baraat - Horse Only</option>
-      <option value="horse-and-carriage">Baraat - Horse and Carriage</option>
-      <option value="vidaai">Vidaai Carriage</option>
-      <option value="baraat-vidaai-package">Baraat &amp; Vidaai Package</option>
-      <option value="other">Other / Not Sure Yet</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="date">Wedding Date</label>
-    <input type="date" id="date" name="date">
-  </div>
-  <div class="form-group">
-    <label for="venue">Venue &amp; City</label>
-    <input type="text" id="venue" name="venue" placeholder="Venue name and city in Texas">
-  </div>
-  <div class="form-group">
-    <label for="message">Tell Us About Your Wedding</label>
-    <textarea id="message" name="message" placeholder="Share any details, special requests, or questions..."></textarea>
-  </div>
-  <button class="form-submit" type="submit">Send Inquiry</button>
-</form>
-
-
-<!-- ======================= PART B: THE SCRIPT ======================= -->
-<script>
-(function () {
-  var f = document.getElementById('inquiry-form');
-  if (!f) return;
-  var btn = f.querySelector('button[type=submit]'), label = btn.textContent;
-  var note = document.createElement('p');
-  note.setAttribute('role', 'status');
-  note.style.cssText = 'margin-top:12px;font-size:.85rem;color:#c0392b;display:none';
-  btn.insertAdjacentElement('afterend', note);
-
-  f.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    if (!f.checkValidity()) { f.reportValidity(); return; }
-    btn.disabled = true; btn.textContent = 'Sending...'; note.style.display = 'none';
-    try {
-      var r = await fetch('https://formspree.io/f/xljjlvqa', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(f)
-      });
-      if (!r.ok) throw new Error('bad status');
-      window.location.href = '/thank-you';
-    } catch (err) {
-      note.textContent = 'Something went wrong. Please call us at (210) 646-4102.';
-      note.style.display = 'block';
-      btn.disabled = false; btn.textContent = label;
-    }
-  });
-})();
-</script>
+    <form action="https://formspree.io/f/xnjozgpy" method="POST">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(210) 646-4102" autocomplete="tel" required>
+      </div>
+      <div class="form-group">
+        <label for="service">Service</label>
+        <select id="service" name="service">
+          <option value="">Select a service</option>
+          <option value="baraat">Baraat Carriage</option>
+          <option value="vidaai">Vidaai Carriage</option>
+          <option value="both">Baraat &amp; Vidaai Package</option>
+          <option value="other">Other / Not Sure Yet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Wedding Date</label>
+        <input type="date" id="date" name="wedding_date">
+      </div>
+      <div class="form-group">
+        <label for="venue">Venue &amp; City</label>
+        <input type="text" id="venue" name="venue" placeholder="Venue name and city in Texas">
+      </div>
+      <div class="form-group">
+        <label for="message">Tell Us About Your Wedding</label>
+        <textarea id="message" name="message" placeholder="Share any details, special requests, or questions..."></textarea>
+      </div>
+      <button class="form-submit" type="submit">Send Inquiry</button>
+    </form>
   </div>
 </section>
 
@@ -606,97 +552,6 @@
       a.style.color = a.getAttribute('href') === '#' + current ? 'var(--saffron)' : '';
     });
   }, { passive: true });
-</script>
-<!-- =======================================================================
- texasbaraathorse.com  |  Formspree form: xljjlvqa
-
- STEP 1: In index.html, find the contact form:
-         <form action="https://formspree.io/f/xnjozgpy" method="POST"> ... </form>
-         Delete it (opening tag through closing </form>) and paste PART A.
-
- STEP 2: Just before </body>, paste PART B as a NEW <script> block.
-         Leave your existing toggleFaq / nav script where it is.
-======================================================================= -->
-
-
-<!-- ======================= PART A: THE FORM ======================= -->
-<form id="inquiry-form" action="https://formspree.io/f/xljjlvqa" method="POST" novalidate>
-
-  <!-- tracking fields (hidden) -->
-  <input type="hidden" name="website" value="texasbaraathorse.com">
-  <input type="hidden" name="category" value="Baraats">
-  <input type="hidden" name="_subject" value="New BARAAT inquiry - texasbaraathorse.com">
-  <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-
-  <div class="form-group">
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
-  </div>
-  <div class="form-group">
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
-  </div>
-  <div class="form-group">
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" placeholder="(210) 646-4102" autocomplete="tel" required>
-  </div>
-  <div class="form-group">
-    <label for="service">Service</label>
-    <select id="service" name="service">
-      <option value="">Select a service</option>
-      <option value="horse-only">Baraat - Horse Only</option>
-      <option value="horse-and-carriage">Baraat - Horse and Carriage</option>
-      <option value="vidaai">Vidaai Carriage</option>
-      <option value="baraat-vidaai-package">Baraat &amp; Vidaai Package</option>
-      <option value="other">Other / Not Sure Yet</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="date">Wedding Date</label>
-    <input type="date" id="date" name="date">
-  </div>
-  <div class="form-group">
-    <label for="venue">Venue &amp; City</label>
-    <input type="text" id="venue" name="venue" placeholder="Venue name and city in Texas">
-  </div>
-  <div class="form-group">
-    <label for="message">Tell Us About Your Wedding</label>
-    <textarea id="message" name="message" placeholder="Share any details, special requests, or questions..."></textarea>
-  </div>
-  <button class="form-submit" type="submit">Send Inquiry</button>
-</form>
-
-
-<!-- ======================= PART B: THE SCRIPT ======================= -->
-<script>
-(function () {
-  var f = document.getElementById('inquiry-form');
-  if (!f) return;
-  var btn = f.querySelector('button[type=submit]'), label = btn.textContent;
-  var note = document.createElement('p');
-  note.setAttribute('role', 'status');
-  note.style.cssText = 'margin-top:12px;font-size:.85rem;color:#c0392b;display:none';
-  btn.insertAdjacentElement('afterend', note);
-
-  f.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    if (!f.checkValidity()) { f.reportValidity(); return; }
-    btn.disabled = true; btn.textContent = 'Sending...'; note.style.display = 'none';
-    try {
-      var r = await fetch('https://formspree.io/f/xljjlvqa', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(f)
-      });
-      if (!r.ok) throw new Error('bad status');
-      window.location.href = '/thank-you';
-    } catch (err) {
-      note.textContent = 'Something went wrong. Please call us at (210) 646-4102.';
-      note.style.display = 'block';
-      btn.disabled = false; btn.textContent = label;
-    }
-  });
-})();
 </script>
 </body>
 </html>
